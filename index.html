@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AUTODOC CALCULATOR - SAFE ORDER</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.css" integrity="sha256-KestrgzinnQ30P2oSFlACALp586eQsA8yqWSJnJvdX4=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/custom.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self';" /> -->
+  </head>
+  <body class="bg-dark ">
+
+    <header></header>
+
+    <!-- Page Content -->
+        <div class="container-fluid">
+            <main class="text-white">
+                <!-- //main content goes here -->
+
+                <form class="container mt-5" action="">
+
+                    <div class="form-group">
+                        <label for="blank_type">Цена Бланк</label>
+                        <select class="form-control selectpicker " data-live-search="true" id="blank_type" >
+                            <option selected>Выберите страну...</option>
+                            <option value="9.01" >Austria / Австрия - DHL</option>
+                            <option value="9.54" >Belgium / Бельгия - DHL</option>
+                            <option value="15.9">Bulgaria / Болгария - DHL</option>
+                            <option value="11.66">Cyprus / Кипр - DHL</option>
+                            <option value="16.22"> Croatia / Хорватия - DHL</option>
+                            <option value="8.69">Czech Republic /Чехия - DHL</option>
+                            <option value="11.13">Denmark / Дания - DHL</option>
+                            <option value="4.6">Denmark / Дания - POSTNORD </option>
+                            <option value="12.72">Estonia / Эстония -DHL</option>
+                            <option value="11.13">Finland / Финландия - DHL</option>
+                            <option value="7.9">Finland / Финландия - POSTNORD </option>
+                            <option value="12.72">France / Франция - DHL</option>
+                            <option value="11.13">Great Britain / Великобритания DHL</option>
+                            <option value="4.24">Germany / Германия - DHL</option>
+                            <option value="23.00">Greece / Греция - DHL</option>
+                            <option value="8.48">Hungary / Венгрия - DHL</option>
+                            <option value="14.31">Italy / Италия - DHL</option>
+                            <option value="19.08">Irland / Ирландия - DHL</option>
+                            <option value="15.90">Latvia / Латвия - DHL</option>
+                            <option value="15.90">Lithuania / Литва - DHL</option>
+                            <option value="8.48">Luxembourg / Люксембург - DHL</option>
+                            <option value="9.54">Netherlands / Нидерланды - DHL</option>
+                            <option value="9.75">Poland / Польша - DHL</option>
+                            <option value="28.00">Portugal / Португалия - DHL</option>
+                            <option value="15.90">Rumania / Румыния - DHL</option>
+                            <option value="19.30">Sweden / Швеция - DHL</option>
+                            <option value="4.5">Sweden / Швеция - POSTNORD</option>
+                            <option value="8.48">Slovakia / Словакия - DHL</option>
+                            <option value="8.48">Slovenia / Словения - DHL</option>
+                            <option value="15.90">Spain / Испания - DHL</option>
+                            <option value="12.19">Switzerland / Швейцария - DHL</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="zakupka">Закуп. € </label>
+                        <input type="text" class="form-control" id="zakupka" placeholder="Закуп. €">
+                    </div>
+                    <label for="dakod">Доход без НДС</label>
+                    <div class="input-group mb-3 ">
+
+                        <input type="text" class="form-control" placeholder="Доход без НДС" id="dakod">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary text-white" type="button" onclick="myfunc()">Расчитать</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <!-- div to display results -->
+
+                <div class="row">
+                    <div role="alert" id="rez"></div>
+                </div>
+            </main>
+            </div>
+
+
+</body>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="assets/app.js"></script>
+<!-- If the require doesn't work, include first the jQuery file
+<script src="jquery-3.0.0.min.js"></script>-->
+<script>window.$ = window.jQuery = require('jquery');</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.js" integrity="sha256-WqN9dPtCScaV4IoqahquHBT+WnkH/nqjm12Hv82c8l8=" crossorigin="anonymous"></script>
+<footer class="mt-10">
+    <div class="container text-white ">
+        <p>Safe Order Calculator tools &copy; 2018 Design by <a href="http://herisatry.com/" target="_blank">Herisatry</a></p>
+    </div>
+</footer>
+</html>
