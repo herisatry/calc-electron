@@ -22,3 +22,6 @@ $ npm install
 $ npm start
 ```
 
+## Main Page
+
+[Imgur](https://i.imgur.com/hwzBckt.png)
